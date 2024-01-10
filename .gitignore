@@ -1,0 +1,15 @@
+*.sln
+*.vs
+*.exe
+*.pdb
+*.log
+*.ilk
+*.obj
+*.idb
+*.tlog
+*.lastbuildstate
+*.recipe
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.bmp
