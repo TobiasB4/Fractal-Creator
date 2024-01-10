@@ -1,14 +1,14 @@
 #include <iostream>
-#include "Bitmap.h"
-#include "BitmapFileHeader.h"
-#include "BitmapInfoHeader.h"
+#include "FractalCreator.h"
+
 
 int main() {
-  const int WIDTH = 800;
-  const int HEIGHT = 600;
-  bitmap::Bitmap bmp(WIDTH, HEIGHT);
-  bmp.setPixel(WIDTH / 2, HEIGHT / 2, 255, 255, 255);
-  bmp.write("test.bmp");
+  fractal::FractalCreator fractalCreator(800, 600);
+  fractalCreator.addRange(0., colour::RGB(0, 0, 0));
+  fractalCreator.addRange(0.3, colour::RGB(255, 0, 0));
+  fractalCreator.addRange(0.5, colour::RGB(255, 255, 0));
+  fractalCreator.addRange(1., colour::RGB(255, 255, 255));
+  fractalCreator.run();
   std::cout << "Finished." << std::endl;
   return 0;
 }
